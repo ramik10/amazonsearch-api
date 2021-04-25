@@ -1,28 +1,26 @@
 from flask import Flask, request
-
+from flask_cors import CORS
 
 # In[4]:
 
 
 from autoscraper import AutoScraper
 
-
 # In[5]:
 
 
-amazon_scraper=AutoScraper()
-
+amazon_scraper = AutoScraper()
 
 # In[6]:
 
 
 amazon_scraper.load('amazon-search')
 
-
 # In[7]:
 
 
-app=Flask(__name__)
+app = Flask(__name__)
+CORS(app)
 
 
 # In[8]:
@@ -42,7 +40,6 @@ def _aggregate_result(result):
     print(list(result.values())[0])
     for i in range(len(list(result.values())[0])):
         try:
-            
             final_result.append({alias: result[alias][i] for alias in result})
         except:
             pass
@@ -58,10 +55,6 @@ def search_api():
     print(query)
     return dict(result=get_amazon_result(query))
 
+
 if __name__ == '__main__':
     app.run(port=8080, host='0.0.0.0')
-
-
-
-
-
