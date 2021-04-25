@@ -7,11 +7,12 @@ In this project I tried to search amazon with a product and then collected the d
 after collecting you have to validate in json format from jsonlint website.
 to use the code u will need a file which will help the code the specific values to look for its included
 u will need two modules for this 
-1.# autoscraper 
-2.# flask
+# Modules Needed
+1. Autoscraper `pip install autoscraper`
+2. Flask `pip install Flask`
 # How to use
-1. Start the flusk development server (i.e. Run the flusk_search.py)
+1. Start the Flask development server (i.e. Run the flusk_search.py)
 2. Open the index.html in browser
-3. Search your desired items
+3. Search your desired items 
 
 Thank you
