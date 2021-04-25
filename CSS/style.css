@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    
+}
+#query {
+    height: 40px;
+    width: 400px;
+    padding-left: 10px;
+    border-radius: 15px;
+    border: 1px solid slategrey;
+    outline:none;
+    margin: 2px;
+} 
+table :hover{
+    cursor: pointer;
+}
+#response {
+    transition: 1s;
+}
